@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/Fondo">
+
+    <ImageView
+        android:id="@+id/infoAdd_btn_izq"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/izquierda"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="27dp"
+        android:layout_marginStart="16dp"
+        />
+
+    <TextView
+        android:id="@+id/infoAdd_txt_nombre"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/infoAdd_btn_izq"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="56dp"
+        android:text="Artri King"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        />
+
+    <ImageView
+        android:id="@+id/info_img_producto"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:src="@mipmap/artrikin"
+        android:layout_marginTop="19dp"
+        android:layout_marginLeft="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/infoAdd_txt_nombre"
+        android:elevation="1dp"
+        />
+
+    <TextView
+        android:id="@+id/infoAdd_txt_precio"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/info_img_producto"
+        android:text="Precio:"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/info_img_producto"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/infoAdd_txt_Pre"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/info_img_producto"
+        android:text="$130.00"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/infoAdd_txt_precio"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/infoAdd_txt_cantidad"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/info_img_producto"
+        android:text="Cantidad:"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/infoAdd_txt_Pre"
+        android:layout_marginLeft="10dp"
+        />
+
+    <EditText
+        android:id="@+id/infoAdd_et_Cant"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/info_img_producto"
+        android:text="1"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/infoAdd_txt_cantidad"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:background="@color/datosadd_white"
+        android:inputType="number"
+        />
+
+    <TextView
+        android:id="@+id/infoAdd_txt_Cantotal"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/infoAdd_et_Cant"
+        android:hint="/10"
+        android:textColorHint="@color/datos_white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/infoAdd_et_Cant"
+        android:gravity="center"
+        android:background="@color/datosadd_black"
+        />
+
+    <TextView
+        android:id="@+id/infoAdd_txt_descuento"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/info_img_producto"
+        android:text="Descuento:"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/infoAdd_et_Cant"
+        android:layout_marginLeft="10dp"
+        />
+
+    <EditText
+        android:id="@+id/infoAdd_et_descvalor"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/info_img_producto"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/infoAdd_txt_descuento"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:background="@color/datosadd_white"
+        android:inputType="number"
+        />
+
+    <TextView
+        android:id="@+id/infoAdd_txt_des"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/infoAdd_et_descvalor"
+        android:hint="$"
+        android:textColorHint="@color/datos_white"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/infoAdd_et_descvalor"
+        android:gravity="center"
+        android:background="@color/datosadd_black"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/venta_btn_aceptar"
+        android:layout_width="206dp"
+        android:layout_height="53dp"
+        android:backgroundTint="@color/black"
+        android:hint="Confirmar"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/info_img_producto"
+        android:layout_marginTop="46dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

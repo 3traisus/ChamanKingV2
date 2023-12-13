@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/datos_white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:id="@+id/Container"
+        >
+
+        <TextView
+            android:id="@+id/datos_txtnombre"
+            android:layout_width="200dp"
+            android:layout_height="0dp"
+            android:text="Nombre"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center|left"
+            android:paddingLeft="15dp"
+            />
+
+        <TextView
+            android:id="@+id/datos_txtprecio"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:text="Precio"
+            android:textSize="16sp"
+            android:textColor="@color/red"
+            app:layout_constraintStart_toEndOf="@+id/datos_txtnombre"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/datos_txtcantidad"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:text="Cantidad"
+            android:textSize="16sp"
+            android:textColor="@color/red"
+            app:layout_constraintStart_toEndOf="@+id/datos_txtprecio"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/datos_txtsubtotal"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:text="subtotal"
+            android:textSize="16sp"
+            android:textColor="@color/red"
+            app:layout_constraintStart_toEndOf="@+id/datos_txtcantidad"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/datos_txtcantidad"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</HorizontalScrollView>

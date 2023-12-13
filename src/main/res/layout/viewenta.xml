@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/Fondo">
+
+    <ImageView
+        android:id="@+id/venta_img_return"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="27dp"
+        android:src="@mipmap/izquierda"
+        />
+
+    <HorizontalScrollView
+        android:id="@+id/venta_hsv_titulos"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        app:layout_constraintTop_toBottomOf="@id/venta_img_return"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="26dp"
+        android:background="@color/prin_llFondo"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/venta_titulos_txtnombre"
+                android:layout_width="200dp"
+                android:layout_height="0dp"
+                android:text="Nombre"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:gravity="center|left"
+                android:paddingLeft="15dp"
+                />
+
+            <TextView
+                android:id="@+id/venta_titulos_txtprecio"
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:text="C/U"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/venta_titulos_txtnombre"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:gravity="center|left"
+                android:paddingLeft="15dp"
+                />
+
+            <TextView
+                android:id="@+id/venta_titulos_txtcantidad"
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:text="Cantidad"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/venta_titulos_txtprecio"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:gravity="center|left"
+                android:paddingLeft="15dp"
+                />
+
+            <TextView
+                android:id="@+id/venta_titulos_txtsubtotal"
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:text="subtotal"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/venta_titulos_txtcantidad"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:gravity="center|left"
+                android:paddingLeft="15dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/venta_recycler"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/venta_hsv_titulos"
+        tools:listitem="@layout/ventadatos"
+
+        />
+
+    <ImageView
+        android:id="@+id/venta_btn_borrar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@mipmap/borrar"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/venta_btn_aceptar"
+        android:layout_width="206dp"
+        android:layout_height="53dp"
+        android:backgroundTint="@color/black"
+        android:hint="Realizar Venta"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/venta_btn_borrar"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="37dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
